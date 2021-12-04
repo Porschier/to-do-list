@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Dem',
       theme: ThemeData(
         
         primarySwatch: Colors.blue,
@@ -37,23 +37,27 @@ class HomeView extends StatelessWidget {
           
         ],
       ),
-     body:  Column(
-    mainAxisSize: MainAxisSize.min,
-       children: [ToDoWidget(),
-     Card(elevation: 15, child: 
-       ListTile(
-         leading: Icon(Icons.check_box),
-         title: Text("Plan the trip to Finland"),
-         subtitle: Text("the family's trip to finland next summer"),
-     trailing:  Text("yesterday"),
-         ),
+     body:  Padding(
+       padding: const EdgeInsets.all(8.0),
+       child: ListView(
+    
+         children: [ToDoWidget(),
+       Card(elevation: 15,
+        child: 
+         ListTile(
+           leading: Icon(Icons.check_box),
+           title: Text("Plan the trip to Finland"),
+           subtitle: Text("the family's trip to finland next summer"),
+       trailing:  Text("yesterday"),
+           ),
   
-       ),ToDoWidget(),
-       ToDoWidget(),
-       ToDoWidget(),
-       ToDoWidget(),
-       ToDoWidget(),
-     ]),
+         ),ToDoWidget(),
+         ToDoWidget(),
+         ToDoWidget(),
+         ToDoWidget(),
+         ToDoWidget(),
+       ]),
+     ),
       
        );
        
