@@ -1,5 +1,6 @@
 //this will allow you to use widgets in your app
 import 'package:flutter/material.dart';
+import 'package:todoapp/create_to_do_view.dart';
 
 // this is the class for our home page
 class HomeView extends StatelessWidget {
@@ -59,7 +60,11 @@ class HomeView extends StatelessWidget {
      ),
       floatingActionButton: FloatingActionButton
       // is circular in shape and has a child enablinh you to put  an item in it
-      (onPressed: (){},child: Icon(Icons.add),),
+      (onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return CreateTodo();
+        } ));
+      },child: Icon(Icons.add),),
 
       bottomSheet:Padding(
         // allowed the housing of completed and all the other items seen at the bottom sheet
